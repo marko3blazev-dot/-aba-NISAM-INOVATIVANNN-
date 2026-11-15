@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://br26wbk24uhqu"]
+
+[ext_resource type="Texture2D" uid="uid://bxm7uh8wkqyqw" path="res://WhatsApp Image 2026-11-14 at 16.39.56.jpeg" id="1_a2ubo"]
+[ext_resource type="Texture2D" uid="uid://bar35jnussunb" path="res://bounci-removebg-preview.png" id="1_j3gmw"]
+[ext_resource type="Texture2D" uid="uid://cm4ys0t5rp8y3" path="res://zaba_sprite.png" id="1_m4i3h"]
+[ext_resource type="Script" uid="uid://dnhnmaufgnjr0" path="res://node.gd" id="1_ywwjl"]
+[ext_resource type="Script" uid="uid://711766soyt7p" path="res://bounce_p.gd" id="2_kwg35"]
+[ext_resource type="Script" uid="uid://pfics2anayh6" path="res://zaba.gd" id="2_m4i3h"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16855"]
+size = Vector2(64, 246)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ns0sv"]
+size = Vector2(77, 77)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ces25"]
+size = Vector2(633, 20)
+
+[node name="Node2D" type="Node2D" unique_id=32734403]
+position = Vector2(107, 125)
+script = ExtResource("1_ywwjl")
+
+[node name="pozadina" type="Sprite2D" parent="." unique_id=691024096]
+position = Vector2(469.49997, 199.49998)
+scale = Vector2(0.718125, 0.80625)
+texture = ExtResource("1_a2ubo")
+
+[node name="bounceP" type="Area2D" parent="." unique_id=645817516]
+position = Vector2(66, 89)
+script = ExtResource("2_kwg35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bounceP" unique_id=1871251451]
+position = Vector2(422, 173)
+shape = SubResource("RectangleShape2D_16855")
+
+[node name="Sprite2D" type="Sprite2D" parent="bounceP" unique_id=1835911099]
+position = Vector2(386, 180)
+scale = Vector2(0.99646395, 0.888102)
+texture = ExtResource("1_j3gmw")
+
+[node name="zaba" type="CharacterBody2D" parent="." unique_id=1324798741]
+position = Vector2(402, 140)
+script = ExtResource("2_m4i3h")
+
+[node name="Sprite2D" type="Sprite2D" parent="zaba" unique_id=2043093576]
+position = Vector2(-179, 84)
+scale = Vector2(2.0952382, 1.6428572)
+texture = ExtResource("1_m4i3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zaba" unique_id=2024738149]
+position = Vector2(-174, 85)
+shape = SubResource("RectangleShape2D_ns0sv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1182451616]
+position = Vector2(17, -43)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1640605306]
+position = Vector2(445.5, 375)
+shape = SubResource("RectangleShape2D_ces25")
+
+[connection signal="body_entered" from="bounceP" to="." method="_on_bounce_p_body_entered"]
+[connection signal="body_entered" from="bounceP" to="bounceP" method="_on_bounce_p_body_entered"]
+[connection signal="body_entered" from="bounceP" to="bounceP" method="_on_body_entered"]

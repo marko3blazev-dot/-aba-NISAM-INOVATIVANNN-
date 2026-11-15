@@ -1,0 +1,428 @@
+[gd_scene format=3 uid="uid://c5efqs8up3kvw"]
+
+[ext_resource type="Texture2D" uid="uid://ij1imax4w7xb" path="res://drugaZ.jpeg" id="1_2xf54"]
+[ext_resource type="Texture2D" uid="uid://drj5j0730r858" path="res://trecaZ.jpeg" id="1_e82pq"]
+[ext_resource type="Texture2D" uid="uid://ge1kjq81tsq2" path="res://petaZ.jpeg" id="1_kwlsd"]
+[ext_resource type="Texture2D" uid="uid://pmjrjpkejrf6" path="res://sedmaZ.jpeg" id="1_onucm"]
+[ext_resource type="Texture2D" uid="uid://djsy6p7cw4jes" path="res://slika1.jpeg" id="1_ukp2m"]
+[ext_resource type="Texture2D" uid="uid://dua34g81834y7" path="res://sestaZ.jpeg" id="1_urn7u"]
+[ext_resource type="Script" uid="uid://pfics2anayh6" path="res://zaba.gd" id="1_v7are"]
+[ext_resource type="Texture2D" uid="uid://bucn8p8jmoeki" path="res://cetvrtaZ.jpeg" id="1_wtiqx"]
+[ext_resource type="Texture2D" uid="uid://fsadqnhnbij7" path="res://prvaZ.jpeg" id="1_ysdca"]
+[ext_resource type="Texture2D" uid="uid://cm4ys0t5rp8y3" path="res://zaba_sprite.png" id="2_v7are"]
+[ext_resource type="Texture2D" uid="uid://bofn667duimch" path="res://oblak.png" id="9_onucm"]
+[ext_resource type="Texture2D" uid="uid://cenna2mglxycp" path="res://zaba_skace.png" id="12_jtj06"]
+[ext_resource type="Script" uid="uid://dvlsia2r1vtky" path="res://prijelaz.gd" id="12_kdi3g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ces25"]
+size = Vector2(121, 170)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2xmhn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_jtj06")
+}],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"stoj",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_v7are"]
+resource_name = "NestajanjePozadine"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pozadina1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.5, 2),
+"transitions": PackedFloat32Array(1, 1.0352648),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pozadina2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pozadina3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(3, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pozadina4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(4, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pozadina5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(5, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pozadina6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(6, 7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pozadina7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(7, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pozadina8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Oblak:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(2, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_qr43u"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pozadina1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pozadina2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Pozadina3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Pozadina4:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Pozadina5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Pozadina6:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Pozadina7:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Pozadina8:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Oblak:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Label2:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qr43u"]
+_data = {
+&"NestajanjePozadine": SubResource("Animation_v7are"),
+&"RESET": SubResource("Animation_qr43u")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1k2b"]
+size = Vector2(210, 167)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2xmhn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_svuqq"]
+size = Vector2(664, 15)
+
+[node name="Node2D" type="Node2D" unique_id=698636570]
+
+[node name="Pozadina8" type="Sprite2D" parent="." unique_id=540508061]
+position = Vector2(576, 323.99997)
+scale = Vector2(0.71999997, 0.81)
+texture = ExtResource("1_onucm")
+
+[node name="Pozadina7" type="Sprite2D" parent="." unique_id=1238351389]
+position = Vector2(576, 324)
+scale = Vector2(0.72, 0.80999994)
+texture = ExtResource("1_urn7u")
+
+[node name="Pozadina6" type="Sprite2D" parent="." unique_id=514848920]
+position = Vector2(576, 324)
+scale = Vector2(5.7600007, 6.4800005)
+texture = ExtResource("1_kwlsd")
+
+[node name="Pozadina5" type="Sprite2D" parent="." unique_id=1968500019]
+position = Vector2(576, 324)
+scale = Vector2(5.7600007, 6.4800005)
+texture = ExtResource("1_wtiqx")
+
+[node name="Pozadina4" type="Sprite2D" parent="." unique_id=1298403773]
+position = Vector2(576, 324)
+scale = Vector2(5.76, 6.48)
+texture = ExtResource("1_e82pq")
+
+[node name="Pozadina3" type="Sprite2D" parent="." unique_id=1381867129]
+position = Vector2(576, 324)
+scale = Vector2(5.76, 6.48)
+texture = ExtResource("1_2xf54")
+
+[node name="Pozadina2" type="Sprite2D" parent="." unique_id=1375416994]
+position = Vector2(575.99994, 324)
+scale = Vector2(5.7599998, 6.48)
+texture = ExtResource("1_ysdca")
+
+[node name="Pozadina1" type="Sprite2D" parent="." unique_id=926977232]
+position = Vector2(578, 324.5)
+scale = Vector2(5.76, 6.4700003)
+texture = ExtResource("1_ukp2m")
+
+[node name="Oblak" type="Sprite2D" parent="." unique_id=122847580]
+visible = false
+position = Vector2(742, 418.00003)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("9_onucm")
+
+[node name="zaba" type="CharacterBody2D" parent="." unique_id=425484150]
+script = ExtResource("1_v7are")
+
+[node name="Sprite2D" type="Sprite2D" parent="zaba" unique_id=1425786744]
+position = Vector2(550, 549)
+scale = Vector2(3, 3)
+texture = ExtResource("2_v7are")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zaba" unique_id=1403122014]
+position = Vector2(550.5, 548)
+shape = SubResource("RectangleShape2D_ces25")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="zaba" unique_id=1857861165]
+position = Vector2(-12, 55)
+sprite_frames = SubResource("SpriteFrames_2xmhn")
+animation = &"stoj"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=503469828]
+libraries/ = SubResource("AnimationLibrary_qr43u")
+autoplay = &"NestajanjePozadine"
+
+[node name="Label2" type="Label" parent="." unique_id=1574891347]
+visible = false
+offset_left = 784.0
+offset_top = 333.0
+offset_right = 816.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 36
+text = "?!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label" type="Label" parent="." unique_id=578806632]
+visible = false
+offset_left = 784.0
+offset_top = 333.0
+offset_right = 816.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 36
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="prijelaz" type="Area2D" parent="." unique_id=2132083320]
+script = ExtResource("12_kdi3g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prijelaz" unique_id=1412880474]
+position = Vector2(1050, 549)
+shape = SubResource("RectangleShape2D_d1k2b")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1274914686]
+position = Vector2(459, 609)
+physics_material_override = SubResource("PhysicsMaterial_2xmhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1816191474]
+position = Vector2(363, 31.5)
+shape = SubResource("RectangleShape2D_svuqq")
+
+[connection signal="body_entered" from="prijelaz" to="prijelaz" method="_on_body_entered"]
+[connection signal="body_exited" from="prijelaz" to="prijelaz" method="_on_body_exited"]

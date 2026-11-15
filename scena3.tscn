@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bwdglh811osvr"]
+
+[ext_resource type="Script" uid="uid://cbthd083l2knk" path="res://scena_3.gd" id="1_75fvv"]
+[ext_resource type="Texture2D" uid="uid://bs1bx20j7rbua" path="res://s3.jpeg" id="1_twe5t"]
+[ext_resource type="Texture2D" uid="uid://cm4ys0t5rp8y3" path="res://zaba_sprite.png" id="2_kba5x"]
+[ext_resource type="Script" uid="uid://pfics2anayh6" path="res://zaba.gd" id="2_t1mav"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_15wn3"]
+size = Vector2(35.484688, 50.31591)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e1c4b"]
+size = Vector2(921.32043, 46.358)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p7fln"]
+size = Vector2(145.5, 182)
+
+[node name="Node2D" type="Node2D" unique_id=19309940]
+script = ExtResource("1_75fvv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1231917651]
+position = Vector2(574, 318)
+scale = Vector2(0.72062504, 0.81)
+texture = ExtResource("1_twe5t")
+
+[node name="zaba" type="CharacterBody2D" parent="." unique_id=1412259386]
+position = Vector2(573, 307)
+scale = Vector2(0.72062504, 0.81)
+script = ExtResource("2_t1mav")
+
+[node name="Sprite2D" type="Sprite2D" parent="zaba" unique_id=414005548]
+position = Vector2(44.405914, 100.000015)
+scale = Vector2(4.5363607, 2.9934316)
+texture = ExtResource("2_kba5x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="zaba" unique_id=900065687]
+position = Vector2(48.56897, 102.46915)
+scale = Vector2(4.5363607, 2.9934316)
+shape = SubResource("RectangleShape2D_15wn3")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=614649662]
+process_mode = 3
+position = Vector2(492, 331)
+scale = Vector2(0.72062504, 0.81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=743706640]
+position = Vector2(448.22202, 185.18518)
+shape = SubResource("RectangleShape2D_e1c4b")
+one_way_collision_margin = 0.0
+
+[node name="prijelaz 3" type="Area2D" parent="." unique_id=1149969977]
+position = Vector2(2, 2)
+collision_mask = 255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="prijelaz 3" unique_id=1673837885]
+position = Vector2(1075.75, 366)
+shape = SubResource("RectangleShape2D_p7fln")
+
+[connection signal="body_entered" from="prijelaz 3" to="." method="_on_prijelaz_3_body_entered"]

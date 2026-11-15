@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b6vl5cu7fatqw"]
+
+[ext_resource type="Texture2D" uid="uid://0pwyf5pcs06w" path="res://s4.jpeg" id="1_w525c"]
+[ext_resource type="Script" uid="uid://pfics2anayh6" path="res://zaba.gd" id="2_shfhs"]
+
+[node name="Node2D" type="Node2D" unique_id=424608859]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=43266107]
+position = Vector2(578.00006, 322.5)
+scale = Vector2(0.72, 0.80875003)
+texture = ExtResource("1_w525c")
+
+[node name="zaba" type="CharacterBody2D" parent="Sprite2D" unique_id=345438814]
+script = ExtResource("2_shfhs")
+metadata/_custom_type_script = "uid://pfics2anayh6"
